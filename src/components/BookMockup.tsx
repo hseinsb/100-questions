@@ -19,17 +19,8 @@ export function BookMockup() {
         }}
       >
         {/* Enhanced shadow */}
-        <motion.div
+        <div
           className="absolute inset-0 bg-black/20 blur-2xl rounded-xl transform translate-y-8 scale-95"
-          animate={{
-            opacity: [0.2, 0.15, 0.3, 0.2],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-            times: [0, 0.25, 0.75, 1]
-          }}
         />
         
         {/* Just the image - no container */}

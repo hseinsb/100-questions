@@ -66,8 +66,8 @@ export function ValuePillars() {
                 className={`card ${pillar.hoverColor} transition-all duration-300 text-center group cursor-pointer`}
               >
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ y: 20 }}
+                  whileInView={{ y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 + 0.2 }}
                   whileHover={{ scale: 1.05 }}
@@ -95,8 +95,8 @@ export function ValuePillars() {
 
         {/* Call to action */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ y: 20 }}
+          whileInView={{ y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-12"

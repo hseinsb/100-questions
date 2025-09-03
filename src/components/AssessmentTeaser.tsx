@@ -159,8 +159,8 @@ export function AssessmentTeaser() {
                 {questions.map((question, index) => (
                   <motion.div
                     key={question.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ y: 20 }}
+                    animate={{ y: 0 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     className="space-y-4"
                   >
@@ -189,8 +189,8 @@ export function AssessmentTeaser() {
                 ))}
 
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  initial={{ y: 10 }}
+                  animate={{ y: 0 }}
                   transition={{ delay: 0.5 }}
                   className="text-center pt-6"
                 >
@@ -206,8 +206,8 @@ export function AssessmentTeaser() {
             ) : (
               <motion.div
                 key="result"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ x: 20 }}
+                animate={{ x: 0 }}
                 transition={{ duration: 0.4 }}
                 className="text-center space-y-6"
               >

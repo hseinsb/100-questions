@@ -26,11 +26,11 @@ export function OldNewSection() {
     offset: ["start end", "end start"]
   })
 
-  const oldArrowOpacity = useTransform(scrollYProgress, [0.3, 0.6], [1, 0.2])
-  const oldArrowX = useTransform(scrollYProgress, [0.3, 0.6], [0, -50])
+  const oldArrowOpacity = useTransform(scrollYProgress, [0.3, 0.6], [1, 0.5])
+  const oldArrowX = useTransform(scrollYProgress, [0.3, 0.6], [0, -20])
   
-  const newArrowOpacity = useTransform(scrollYProgress, [0.4, 0.7], [0.2, 1])
-  const newArrowX = useTransform(scrollYProgress, [0.4, 0.7], [50, 0])
+  const newArrowOpacity = useTransform(scrollYProgress, [0.4, 0.7], [0.5, 1])
+  const newArrowX = useTransform(scrollYProgress, [0.4, 0.7], [20, 0])
 
   return (
     <>
@@ -78,8 +78,8 @@ export function OldNewSection() {
                 {oldWayItems.map((item, index) => (
                   <motion.li
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ x: -20 }}
+                    whileInView={{ x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     className="flex items-start space-x-3"
@@ -123,8 +123,8 @@ export function OldNewSection() {
                 {newWayItems.map((item, index) => (
                   <motion.li
                     key={index}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ x: 20 }}
+                    whileInView={{ x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: index * 0.1 + 0.2 }}
                     className="flex items-start space-x-3"
@@ -147,8 +147,8 @@ export function OldNewSection() {
         {/* Central transition element */}
         <div className="relative mt-12">
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ scale: 0.9 }}
+            whileInView={{ scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex justify-center"

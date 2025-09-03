@@ -129,8 +129,8 @@ export function TestimonialsCarousel() {
                 className="card text-center py-12 px-8"
               >
                 <motion.div
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
+                  initial={{ scale: 0.9 }}
+                  animate={{ scale: 1 }}
                   transition={{ 
                     delay: 0.1, 
                     duration: 0.3,

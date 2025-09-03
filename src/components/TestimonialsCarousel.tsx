@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Heart, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const testimonials = [
@@ -116,18 +116,21 @@ export function TestimonialsCarousel() {
         >
           {/* Main carousel */}
           <div className="relative overflow-hidden rounded-xl">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentIndex}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ 
-                  duration: 0.4,
-                  ease: "easeInOut"
-                }}
-                className="card text-center py-12 px-8"
-              >
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ 
+                duration: 0.3,
+                ease: "easeOut"
+              }}
+              style={{ 
+                transform: 'translate3d(0, 0, 0)',
+                backfaceVisibility: 'hidden',
+                WebkitBackfaceVisibility: 'hidden'
+              }}
+              className="card text-center py-12 px-8"
+            >
                 <div className="flex justify-center mb-6">
                   <Heart className="w-8 h-8 text-accent-primary" />
                 </div>
@@ -155,8 +158,7 @@ export function TestimonialsCarousel() {
                     {testimonials[currentIndex].status}
                   </div>
                 </cite>
-              </motion.div>
-            </AnimatePresence>
+            </motion.div>
           </div>
 
           {/* Navigation arrows */}

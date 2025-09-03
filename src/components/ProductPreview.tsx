@@ -65,8 +65,8 @@ export function ProductPreview() {
           {categories.map((category, index) => (
             <motion.div
               key={index}
-              initial={{ y: 30 }}
-              whileInView={{ y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.25 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="card hover:shadow-lg transition-all duration-300"

@@ -17,9 +17,9 @@ export function GuaranteeBlock() {
       <section className="py-12 bg-surface-base">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main guarantee card */}
-        <motion.div
-          initial={{ y: 30 }}
-          whileInView={{ y: 0 }}
+                 <motion.div
+           initial={{ y: 30 }}
+           whileInView={{ y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.6 }}
           className="bg-surface-card rounded-2xl shadow-xl border border-gray-100 overflow-hidden mb-12"

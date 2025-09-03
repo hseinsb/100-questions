@@ -25,7 +25,7 @@ export function BookMockup() {
         
         {/* Just the image - no container */}
         <img
-          src="/cover-image.png"
+          src="/cover-image.jpg"
           alt="100 Questions for Relationship Compatibility Book Cover"
           className="w-72 h-96 object-cover"
           style={{ backgroundColor: 'transparent' }}

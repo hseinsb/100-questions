@@ -55,8 +55,8 @@ export function OldNewSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Old Way */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ y: 30 }}
+            whileInView={{ y: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="relative"
@@ -100,8 +100,8 @@ export function OldNewSection() {
 
           {/* New Way */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ y: 30 }}
+            whileInView={{ y: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"

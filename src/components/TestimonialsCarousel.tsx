@@ -119,9 +119,9 @@ export function TestimonialsCarousel() {
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
-                initial={{ scale: 0.95 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0.95 }}
+                              initial={{ x: 20 }}
+              animate={{ x: 0 }}
+              exit={{ x: -20 }}
                 transition={{ 
                   duration: 0.4,
                   ease: "easeOut"

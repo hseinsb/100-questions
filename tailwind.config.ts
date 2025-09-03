@@ -45,7 +45,7 @@ const config: Config = {
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
-        'heart-beat': 'heartbeat 1.5s ease-in-out infinite',
+        'heart-beat': 'heartbeat 3s ease-in-out infinite',
         'underline-draw': 'underline-draw 600ms ease-out forwards',
         'fade-up': 'fade-up 600ms ease-out forwards',
         'slide-up': 'slide-up 600ms ease-out forwards',
@@ -59,7 +59,7 @@ const config: Config = {
         },
         heartbeat: {
           '0%, 100%': { transform: 'scale(1)' },
-          '50%': { transform: 'scale(1.1)' },
+          '50%': { transform: 'scale(1.05)' },
         },
         'underline-draw': {
           '0%': { width: '0%' },

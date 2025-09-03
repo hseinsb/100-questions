@@ -128,8 +128,13 @@ export function ValuePillars() {
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              animate={{ x: [0, 4, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
+              animate={{ x: [0, 2, 0] }}
+              transition={{ 
+                duration: 3, 
+                repeat: Infinity, 
+                ease: "easeInOut",
+                repeatType: "reverse"
+              }}
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </motion.svg>

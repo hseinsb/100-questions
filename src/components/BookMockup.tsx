@@ -9,26 +9,26 @@ export function BookMockup() {
       <motion.div
         className="relative"
         animate={{
-          y: [-6, 6, -6],
+          y: [0, -6, 6, 0],
         }}
         transition={{
           duration: 8,
           repeat: Infinity,
           ease: "easeInOut",
-          repeatType: "reverse"
+          times: [0, 0.25, 0.75, 1]
         }}
       >
         {/* Enhanced shadow */}
         <motion.div
           className="absolute inset-0 bg-black/20 blur-2xl rounded-xl transform translate-y-8 scale-95"
           animate={{
-            opacity: [0.15, 0.3, 0.15],
+            opacity: [0.2, 0.15, 0.3, 0.2],
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
             ease: "easeInOut",
-            repeatType: "reverse"
+            times: [0, 0.25, 0.75, 1]
           }}
         />
         

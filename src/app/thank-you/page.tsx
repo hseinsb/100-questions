@@ -83,8 +83,8 @@ export default function ThankYouPage() {
         
         {/* Header with Creator */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ y: 20 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-8"
         >
@@ -96,8 +96,8 @@ export default function ThankYouPage() {
 
         {/* Main Success Message */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ y: 30 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center mb-12"
         >
@@ -128,8 +128,8 @@ export default function ThankYouPage() {
 
         {/* Download Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ y: 20 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mb-12"
         >
@@ -148,8 +148,8 @@ export default function ThankYouPage() {
 
         {/* Support Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ y: 20 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center bg-gray-50 rounded-xl p-8 mb-8"
         >
@@ -166,8 +166,8 @@ export default function ThankYouPage() {
 
         {/* Footer */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ y: 10 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.6, delay: 1 }}
           className="text-center text-gray-500 text-sm"
         >

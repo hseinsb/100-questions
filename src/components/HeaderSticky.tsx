@@ -33,9 +33,9 @@ export function HeaderSticky() {
     <AnimatePresence>
       {isVisible && (
         <motion.header
-          initial={{ y: -12, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -12, opacity: 0 }}
+          initial={{ y: -12 }}
+          animate={{ y: 0 }}
+          exit={{ y: -12 }}
           transition={{ duration: 0.2 }}
           className="fixed top-0 left-0 right-0 z-50 bg-surface-card/95 backdrop-blur-sm border-b border-ink-100 shadow-sm"
         >

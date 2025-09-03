@@ -39,8 +39,8 @@ export function Hero() {
 
     return (
       <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ y: 10 }}
+        animate={{ y: 0 }}
         className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium border ${config.color}`}
       >
         Your snapshot: {config.text}
@@ -63,8 +63,8 @@ export function Hero() {
             
             {/* Eyebrow */}
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.6, delay: 0.0 }}
               className="text-eyebrow text-ink-600 uppercase tracking-wider"
             >
@@ -73,8 +73,8 @@ export function Hero() {
             
             {/* H1 with animated underline */}
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 30 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="font-heading font-bold text-hero-h1 text-ink-900 text-balance"
             >
@@ -86,8 +86,8 @@ export function Hero() {
 
             {/* Subhead */}
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-hero-subhead text-ink-900 text-balance max-w-lg"
             >
@@ -96,14 +96,14 @@ export function Hero() {
 
             {/* CTAs */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4"
             >
               <motion.button
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ scale: 0.9 }}
+                animate={{ scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.4, type: 'spring', stiffness: 150 }}
                 onClick={handlePrimaryClick}
                 className="btn-primary"
@@ -112,8 +112,8 @@ export function Hero() {
               </motion.button>
               
               <motion.button
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ scale: 0.9 }}
+                animate={{ scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.5, type: 'spring', stiffness: 150 }}
                 onClick={handleSecondaryClick}
                 className="btn-secondary"
@@ -127,8 +127,8 @@ export function Hero() {
 
           {/* Right Column - Book Mockup */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.98 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ scale: 0.98 }}
+            animate={{ scale: 1 }}
             transition={{ duration: 0.6, delay: 0.5, ease: 'easeOut' }}
             className="flex justify-center lg:justify-end"
           >

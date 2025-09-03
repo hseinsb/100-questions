@@ -15,7 +15,7 @@ export function Analytics() {
       {/* Google Analytics */}
       <Script
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+        src="https://www.googletagmanager.com/gtag/js?id=G-LLQCXJ05QF"
       />
       <Script
         id="google-analytics"
@@ -25,10 +25,18 @@ export function Analytics() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+            gtag('config', 'G-LLQCXJ05QF', {
               page_title: document.title,
               page_location: window.location.href,
-              send_page_view: true
+              send_page_view: true,
+              enhanced_measurement: true
+            });
+            
+            // Enhanced tracking for scroll depth
+            gtag('config', 'G-LLQCXJ05QF', {
+              custom_map: {
+                'custom_parameter_1': 'scroll_depth'
+              }
             });
           `,
         }}

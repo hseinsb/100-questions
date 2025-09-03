@@ -47,8 +47,8 @@ export function ProductPreview() {
       <section id="product-preview" className="py-12 bg-surface-base">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ y: 30 }}
+          whileInView={{ y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
@@ -65,8 +65,8 @@ export function ProductPreview() {
           {categories.map((category, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ y: 30 }}
+              whileInView={{ y: 0 }}
               viewport={{ once: true, amount: 0.25 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="card hover:shadow-lg transition-all duration-300"
@@ -110,8 +110,8 @@ export function ProductPreview() {
 
         {/* Feature highlights */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ y: 30 }}
+          whileInView={{ y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.6 }}
           className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 mb-12"

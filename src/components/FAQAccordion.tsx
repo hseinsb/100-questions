@@ -55,8 +55,8 @@ export function FAQAccordion() {
       <section className="py-12 bg-surface-base">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ y: 30 }}
+          whileInView={{ y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
@@ -73,8 +73,8 @@ export function FAQAccordion() {
           {faqs.map((faq, index) => (
             <motion.div
               key={faq.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ y: 30 }}
+              whileInView={{ y: 0 }}
               viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="card hover:shadow-md transition-all duration-200"
@@ -101,9 +101,9 @@ export function FAQAccordion() {
                 {openItems.includes(faq.id) && (
                   <motion.div
                     id={`faq-answer-${faq.id}`}
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
+                    initial={{ height: 0 }}
+                    animate={{ height: "auto" }}
+                    exit={{ height: 0 }}
                     transition={{ duration: 0.3, ease: "easeOut" }}
                     className="overflow-hidden"
                   >

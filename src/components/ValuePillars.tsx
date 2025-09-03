@@ -80,8 +80,8 @@ export function ValuePillars() {
                     type: "spring",
                     stiffness: 200
                   }}
-                  whileHover={{ scale: 1.1 }}
-                  className={`w-16 h-16 ${pillar.bgColor} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg transition-all duration-300`}
+                  whileHover={{ scale: 1.05 }}
+                  className={`w-16 h-16 ${pillar.bgColor} rounded-2xl flex items-center justify-center mx-auto mb-6 transition-all duration-200`}
                 >
                   <Icon className={`w-8 h-8 ${pillar.color}`} />
                 </motion.div>
@@ -95,11 +95,8 @@ export function ValuePillars() {
                 </p>
 
                 {/* Decorative element that appears on hover */}
-                <motion.div
-                  initial={{ width: 0 }}
-                  whileHover={{ width: "100%" }}
-                  transition={{ duration: 0.3 }}
-                  className={`h-0.5 ${pillar.color === 'text-accent-secondary' ? 'bg-accent-secondary' : 'bg-accent-primary'} mx-auto mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                <div
+                  className={`h-0.5 w-0 ${pillar.color === 'text-accent-secondary' ? 'bg-accent-secondary' : 'bg-accent-primary'} mx-auto mt-6 group-hover:w-full transition-all duration-300`}
                 />
               </motion.div>
             )

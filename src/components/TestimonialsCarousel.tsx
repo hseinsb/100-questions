@@ -119,16 +119,23 @@ export function TestimonialsCarousel() {
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
-                initial={{ opacity: 0, x: 100 }}
+                initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.3 }}
+                exit={{ opacity: 0, x: -30 }}
+                transition={{ 
+                  duration: 0.5,
+                  ease: "easeOut"
+                }}
                 className="card text-center py-12 px-8"
               >
                 <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ 
+                    delay: 0.1, 
+                    duration: 0.3,
+                    ease: "easeOut"
+                  }}
                   className="flex justify-center mb-6"
                 >
                   <Heart className="w-8 h-8 text-accent-primary animate-heart-beat" />

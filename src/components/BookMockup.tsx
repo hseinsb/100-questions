@@ -12,23 +12,23 @@ export function BookMockup() {
           y: [-6, 6, -6],
         }}
         transition={{
-          y: {
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+          repeatType: "reverse"
         }}
       >
         {/* Enhanced shadow */}
         <motion.div
           className="absolute inset-0 bg-black/20 blur-2xl rounded-xl transform translate-y-8 scale-95"
           animate={{
-            opacity: [0.2, 0.4, 0.2],
+            opacity: [0.15, 0.3, 0.15],
           }}
           transition={{
-            duration: 6,
+            duration: 8,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
+            repeatType: "reverse"
           }}
         />
         

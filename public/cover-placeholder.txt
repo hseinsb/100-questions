@@ -1,0 +1,8 @@
+Upload your ebook cover image here and name it "cover-image.jpg"
+
+The image should be:
+- 288px wide x 384px tall (3:4 aspect ratio)
+- High quality JPG or PNG format
+- Professional book cover design
+
+Once uploaded, the BookMockup component will automatically display your custom cover with the same 3D parallax effects.

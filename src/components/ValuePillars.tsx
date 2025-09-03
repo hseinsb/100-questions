@@ -37,7 +37,7 @@ export function ValuePillars() {
       <section className="py-12 bg-surface-base">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.6 }}
@@ -58,28 +58,18 @@ export function ValuePillars() {
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.25 }}
-                transition={{ 
-                  duration: 0.6, 
-                  delay: index * 0.1,
-                  type: "spring",
-                  stiffness: 100
-                }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.02 }}
                 className={`card ${pillar.hoverColor} transition-all duration-300 text-center group cursor-pointer`}
               >
                 <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ 
-                    duration: 0.5, 
-                    delay: index * 0.1 + 0.3,
-                    type: "spring",
-                    stiffness: 200
-                  }}
+                  transition={{ duration: 0.6, delay: index * 0.1 + 0.2 }}
                   whileHover={{ scale: 1.05 }}
                   className={`w-16 h-16 ${pillar.bgColor} rounded-2xl flex items-center justify-center mx-auto mb-6 transition-all duration-200`}
                 >

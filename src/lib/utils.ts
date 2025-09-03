@@ -19,11 +19,12 @@ export function getUtmParams(): Record<string, string> {
   const urlParams = new URLSearchParams(window.location.search)
   const utmParams: Record<string, string> = {}
   
-  for (const [key, value] of urlParams.entries()) {
+  // More compatible iteration method
+  urlParams.forEach((value, key) => {
     if (key.startsWith('utm_') || key === 'band') {
       utmParams[key] = value
     }
-  }
+  })
   
   return utmParams
 }

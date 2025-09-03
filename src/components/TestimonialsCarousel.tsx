@@ -115,50 +115,50 @@ export function TestimonialsCarousel() {
           onMouseLeave={() => setIsPlaying(true)}
         >
           {/* Main carousel */}
-          <div className="relative overflow-hidden rounded-xl">
-            <motion.div
-              key={currentIndex}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ 
-                duration: 0.3,
-                ease: "easeOut"
-              }}
-              style={{ 
-                transform: 'translate3d(0, 0, 0)',
-                backfaceVisibility: 'hidden',
-                WebkitBackfaceVisibility: 'hidden'
-              }}
-              className="card text-center py-12 px-8"
-            >
-                <div className="flex justify-center mb-6">
-                  <Heart className="w-8 h-8 text-accent-primary" />
+          <div className="relative rounded-xl min-h-[300px]">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={testimonial.id}
+                className={`absolute inset-0 transition-opacity duration-500 ease-in-out ${
+                  index === currentIndex ? 'opacity-100' : 'opacity-0'
+                }`}
+                style={{ 
+                  transform: 'translate3d(0, 0, 0)',
+                  backfaceVisibility: 'hidden',
+                  WebkitBackfaceVisibility: 'hidden'
+                }}
+              >
+                <div className="card text-center py-12 px-8 h-full">
+                  <div className="flex justify-center mb-6">
+                    <Heart className="w-8 h-8 text-accent-primary" />
+                  </div>
+
+                  <blockquote className="text-ink-900 text-body-lg mb-6 leading-relaxed">
+                    "{testimonial.content}"
+                  </blockquote>
+
+                  <div className="flex justify-center mb-4">
+                    <div className="flex space-x-1">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Heart 
+                          key={i} 
+                          className="w-4 h-4 text-accent-primary fill-current" 
+                        />
+                      ))}
+                    </div>
+                  </div>
+
+                  <cite className="not-italic">
+                    <div className="font-semibold text-ink-900">
+                      {testimonial.name}
+                    </div>
+                    <div className="text-sm text-ink-600">
+                      {testimonial.status}
+                    </div>
+                  </cite>
                 </div>
-
-                <blockquote className="text-ink-900 text-body-lg mb-6 leading-relaxed">
-                  "{testimonials[currentIndex].content}"
-                </blockquote>
-
-                <div className="flex justify-center mb-4">
-                  <div className="flex space-x-1">
-                    {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                      <Heart 
-                        key={i} 
-                        className="w-4 h-4 text-accent-primary fill-current" 
-                      />
-                    ))}
-                  </div>
-                </div>
-
-                <cite className="not-italic">
-                  <div className="font-semibold text-ink-900">
-                    {testimonials[currentIndex].name}
-                  </div>
-                  <div className="text-sm text-ink-600">
-                    {testimonials[currentIndex].status}
-                  </div>
-                </cite>
-            </motion.div>
+              </div>
+            ))}
           </div>
 
           {/* Navigation arrows */}

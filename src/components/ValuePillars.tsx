@@ -58,8 +58,8 @@ export function ValuePillars() {
             return (
               <motion.div
                 key={index}
-                              initial={{ y: 30 }}
-              whileInView={{ y: 0 }}
+                initial={{ y: 30 }}
+                whileInView={{ y: 0 }}
                 viewport={{ once: true, amount: 0.25 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.02 }}

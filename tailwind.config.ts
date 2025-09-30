@@ -58,6 +58,12 @@ const config: Config = {
         'gradient-shift': 'gradient-shift 8s ease infinite',
         'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
         'bounce-subtle': 'bounce-subtle 2s infinite',
+        'fade-in': 'fadeIn 0.6s ease-out forwards',
+        'fade-in-delay-1': 'fadeIn 0.6s ease-out 0.1s forwards',
+        'fade-in-delay-2': 'fadeIn 0.6s ease-out 0.2s forwards',
+        'fade-in-delay-3': 'fadeIn 0.6s ease-out 0.3s forwards',
+        'fade-in-delay-4': 'fadeIn 0.6s ease-out 0.4s forwards',
+        'fade-in-delay-5': 'fadeIn 0.6s ease-out 0.5s forwards',
       },
       keyframes: {
         float: {
@@ -103,6 +109,10 @@ const config: Config = {
         'bounce-subtle': {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
         },
       },
     },

@@ -67,7 +67,7 @@ export function Hero() {
             {getBandPill()}
             
             {/* Eyebrow with icon */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-accent-primary/20 to-accent-secondary/20 border-2 border-accent-primary/30 rounded-full backdrop-blur-sm opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-accent-primary/20 to-accent-secondary/20 border-2 border-accent-primary/30 rounded-full backdrop-blur-sm opacity-0 animate-fade-in">
               <Heart className="w-4 h-4 text-accent-primary fill-current animate-heart-beat" />
               <span className="text-sm font-bold text-ink-900 uppercase tracking-wider">
                 Know before you commit
@@ -76,7 +76,7 @@ export function Hero() {
             </div>
             
             {/* H1 with animated underline */}
-            <h1 className="font-heading font-extrabold text-hero-h1 text-ink-900 text-balance leading-tight opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]" style={{ animationDelay: '0.1s' }}>
+            <h1 className="font-heading font-extrabold text-hero-h1 text-ink-900 text-balance leading-tight opacity-0 animate-fade-in-delay-1">
               Are you ready for{' '}
               <span className="relative inline-block">
                 <span className="relative animated-underline bg-gradient-to-r from-accent-primary via-orange-500 to-accent-secondary bg-clip-text text-transparent drop-shadow-sm">
@@ -89,12 +89,12 @@ export function Hero() {
             </h1>
 
             {/* Subhead */}
-            <p className="text-hero-subhead text-ink-900 text-balance max-w-lg font-medium leading-relaxed opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]" style={{ animationDelay: '0.2s' }}>
+            <p className="text-hero-subhead text-ink-900 text-balance max-w-lg font-medium leading-relaxed opacity-0 animate-fade-in-delay-2">
               Ask the questions that reveal compatibility, protect your heart, and build lasting trust—before you commit.
             </p>
 
             {/* Trust Badges */}
-            <div className="flex flex-wrap gap-3 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]" style={{ animationDelay: '0.25s' }}>
+            <div className="flex flex-wrap gap-3 opacity-0 animate-fade-in-delay-2">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border-2 border-accent-primary/20 shadow-lg">
                 <CheckCircle className="w-5 h-5 text-green-600" />
                 <span className="text-sm font-semibold text-ink-900">Expert-Curated</span>
@@ -110,7 +110,7 @@ export function Hero() {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]" style={{ animationDelay: '0.3s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 opacity-0 animate-fade-in-delay-3">
               <button
                 onClick={handlePrimaryClick}
                 className="btn-primary text-lg font-bold shadow-2xl md:hover:shadow-accent-primary/40 relative overflow-hidden group"
@@ -135,7 +135,7 @@ export function Hero() {
             </div>
             
             {/* Social proof */}
-            <p className="text-sm text-ink-600 flex items-center gap-2 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]" style={{ animationDelay: '0.35s' }}>
+            <p className="text-sm text-ink-600 flex items-center gap-2 opacity-0 animate-fade-in-delay-3">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4].map((i) => (
                   <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-accent-primary to-accent-secondary border-2 border-white shadow-sm" />

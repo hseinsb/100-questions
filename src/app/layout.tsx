@@ -4,6 +4,7 @@ import './globals.css'
 import { HeaderSticky } from '@/components/HeaderSticky'
 import { Footer } from '@/components/Footer'
 import { StickyMobileCTA } from '@/components/StickyMobileCTA'
+import { ScrollAnimations } from '@/components/ScrollAnimations'
 import { Analytics } from './analytics'
 
 const inter = Inter({ 
@@ -100,6 +101,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} antialiased`}>
         <Analytics />
+        <ScrollAnimations />
         <HeaderSticky />
         <main className="min-h-screen">
           {children}

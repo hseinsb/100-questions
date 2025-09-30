@@ -67,58 +67,34 @@ export function Hero() {
             {getBandPill()}
             
             {/* Eyebrow with icon */}
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.0 }}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-accent-primary/20 to-accent-secondary/20 border-2 border-accent-primary/30 rounded-full backdrop-blur-sm"
-            >
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-accent-primary/20 to-accent-secondary/20 border-2 border-accent-primary/30 rounded-full backdrop-blur-sm opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]">
               <Heart className="w-4 h-4 text-accent-primary fill-current animate-heart-beat" />
               <span className="text-sm font-bold text-ink-900 uppercase tracking-wider">
                 Know before you commit
               </span>
               <Sparkles className="w-4 h-4 text-accent-secondary" />
-            </motion.div>
+            </div>
             
             {/* H1 with animated underline */}
-            <motion.h1
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-heading font-extrabold text-hero-h1 text-ink-900 text-balance leading-tight"
-            >
+            <h1 className="font-heading font-extrabold text-hero-h1 text-ink-900 text-balance leading-tight opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]" style={{ animationDelay: '0.1s' }}>
               Are you ready for{' '}
               <span className="relative inline-block">
                 <span className="relative animated-underline bg-gradient-to-r from-accent-primary via-orange-500 to-accent-secondary bg-clip-text text-transparent drop-shadow-sm">
                   forever?
                 </span>
-                <motion.span
-                  className="absolute -top-2 -right-8 text-2xl"
-                  animate={{ rotate: [0, 15, -15, 0] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
+                <span className="absolute -top-2 -right-8 text-2xl">
                   💫
-                </motion.span>
+                </span>
               </span>
-            </motion.h1>
+            </h1>
 
             {/* Subhead */}
-            <motion.p
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-hero-subhead text-ink-900 text-balance max-w-lg font-medium leading-relaxed"
-            >
+            <p className="text-hero-subhead text-ink-900 text-balance max-w-lg font-medium leading-relaxed opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]" style={{ animationDelay: '0.2s' }}>
               Ask the questions that reveal compatibility, protect your heart, and build lasting trust—before you commit.
-            </motion.p>
+            </p>
 
             {/* Trust Badges */}
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.25 }}
-              className="flex flex-wrap gap-3"
-            >
+            <div className="flex flex-wrap gap-3 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]" style={{ animationDelay: '0.25s' }}>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border-2 border-accent-primary/20 shadow-lg">
                 <CheckCircle className="w-5 h-5 text-green-600" />
                 <span className="text-sm font-semibold text-ink-900">Expert-Curated</span>
@@ -131,43 +107,23 @@ export function Hero() {
                 <Star className="w-5 h-5 text-amber-500 fill-current" />
                 <span className="text-sm font-semibold text-ink-900">1000+ Happy Couples</span>
               </div>
-            </motion.div>
+            </div>
 
             {/* CTAs */}
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4 pt-4"
-            >
-              <motion.button
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.4, delay: 0.4, type: 'spring', stiffness: 150 }}
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]" style={{ animationDelay: '0.3s' }}>
+              <button
                 onClick={handlePrimaryClick}
-                className="btn-primary text-lg font-bold shadow-2xl hover:shadow-accent-primary/40 relative overflow-hidden group"
+                className="btn-primary text-lg font-bold shadow-2xl md:hover:shadow-accent-primary/40 relative overflow-hidden group"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   <Sparkles className="w-5 h-5" />
                   Get the Guide
-                  <motion.span
-                    animate={{ x: [0, 4, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  >
-                    →
-                  </motion.span>
+                  <span>→</span>
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-              </motion.button>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full md:group-hover:translate-x-full transition-transform duration-1000" />
+              </button>
               
-              <motion.button
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.4, delay: 0.5, type: 'spring', stiffness: 150 }}
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
+              <button
                 onClick={handleSecondaryClick}
                 className="btn-secondary text-lg font-bold"
               >
@@ -175,23 +131,18 @@ export function Hero() {
                   <Heart className="w-5 h-5" />
                   Try the free assessment
                 </span>
-              </motion.button>
-            </motion.div>
+              </button>
+            </div>
             
             {/* Social proof */}
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-sm text-ink-600 flex items-center gap-2"
-            >
+            <p className="text-sm text-ink-600 flex items-center gap-2 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]" style={{ animationDelay: '0.35s' }}>
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4].map((i) => (
                   <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-accent-primary to-accent-secondary border-2 border-white shadow-sm" />
                 ))}
               </div>
               <span className="font-semibold">Join 1,000+ couples who found clarity</span>
-            </motion.p>
+            </p>
 
 
           </div>

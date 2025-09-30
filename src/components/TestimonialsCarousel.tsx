@@ -99,7 +99,7 @@ export function TestimonialsCarousel() {
           <div className="absolute bottom-10 left-10 w-96 h-96 bg-gradient-to-tl from-amber-400/20 to-accent-secondary/20 rounded-full" />
         </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-12 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]">
+        <div className="text-center mb-12 opacity-0 animate-fade-in">
           <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4 flex items-center justify-center gap-3 flex-wrap">
             <Sparkles className="w-8 h-8 text-accent-primary" />
             <span className="gradient-text">Real couples.</span>{' '}

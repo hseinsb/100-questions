@@ -42,7 +42,7 @@ export function OldNewSection() {
           <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-gradient-to-tl from-green-200/20 to-emerald-200/20 rounded-full" />
         </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-16 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]">
+        <div className="text-center mb-16 opacity-0 animate-fade-in">
           <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4 flex items-center justify-center gap-3 flex-wrap">
             <Sparkles className="w-8 h-8 text-accent-primary animate-pulse" />
             <span className="text-ink-900">Stop guessing.</span>{' '}
@@ -56,7 +56,7 @@ export function OldNewSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Old Way */}
-          <div className="relative opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]" style={{ animationDelay: '0.1s' }}>
+          <div className="relative opacity-0 animate-fade-in-delay-1">
             <div className="bg-gradient-to-br from-red-50 to-red-100/50 border-2 border-red-200 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
@@ -93,7 +93,7 @@ export function OldNewSection() {
         </div>
 
         {/* New Way */}
-        <div className="relative opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]" style={{ animationDelay: '0.2s' }}>
+        <div className="relative opacity-0 animate-fade-in-delay-2">
             <div className="bg-gradient-to-br from-green-50 to-emerald-100/50 border-2 border-green-300 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 glow-effect">
               <div className="flex items-center justify-between mb-6">
                 <motion.div
@@ -132,7 +132,7 @@ export function OldNewSection() {
 
       {/* Central transition element */}
       <div className="relative mt-16">
-        <div className="flex justify-center opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]" style={{ animationDelay: '0.4s' }}>
+        <div className="flex justify-center opacity-0 animate-fade-in-delay-4">
           <div className="bg-gradient-to-r from-accent-primary via-accent-secondary to-accent-primary text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-2xl md:hover:shadow-3xl transition-all duration-300 md:hover:scale-105 cursor-pointer glow-effect-strong">
             <span className="flex items-center gap-2">
               ✨ Choose your path forward

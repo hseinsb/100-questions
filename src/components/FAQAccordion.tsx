@@ -81,12 +81,11 @@ export function FAQAccordion() {
           {faqs.map((faq, index) => (
             <motion.div
               key={faq.id}
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ scale: 1.01, y: -2 }}
-              className="bg-gradient-to-br from-white to-accent-primary-weak/10 border-2 border-accent-primary/10 hover:border-accent-primary/30 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300"
+              className="bg-gradient-to-br from-white to-accent-primary-weak/10 border-2 border-accent-primary/10 md:hover:border-accent-primary/30 rounded-2xl p-6 shadow-lg md:hover:shadow-2xl md:hover:scale-[1.01] md:hover:-translate-y-1 transition-all duration-300"
             >
               <button
                 onClick={() => toggleItem(faq.id)}

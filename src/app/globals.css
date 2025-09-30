@@ -116,6 +116,21 @@ img, picture, video {
   -webkit-transform: translateZ(0);
 }
 
+/* Disable hover effects on touch devices to prevent lag */
+@media (hover: none) and (pointer: coarse) {
+  .card:hover,
+  .btn-primary:hover,
+  .btn-secondary:hover {
+    transform: none !important;
+    box-shadow: inherit !important;
+  }
+  
+  /* Keep basic transitions smooth */
+  * {
+    transition-duration: 0.2s !important;
+  }
+}
+
 /* Reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
   .animate-float,

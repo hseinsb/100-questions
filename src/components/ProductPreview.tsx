@@ -71,15 +71,14 @@ export function ProductPreview() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {categories.map((category, index) => (
-            <motion.div
-              key={index}
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true, amount: 0.25 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ scale: 1.03, y: -8 }}
-              className="bg-gradient-to-br from-white to-accent-primary-weak/10 border-2 border-accent-primary/10 hover:border-accent-primary/30 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300"
-            >
+              <motion.div
+                key={index}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.25 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-white to-accent-primary-weak/10 border-2 border-accent-primary/10 md:hover:border-accent-primary/30 rounded-2xl p-8 shadow-xl md:hover:shadow-2xl md:hover:scale-105 md:hover:-translate-y-2 transition-all duration-300"
+              >
               <div className="text-center mb-6">
                 <motion.div
                   initial={{ scale: 0 }}

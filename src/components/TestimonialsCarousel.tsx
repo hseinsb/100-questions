@@ -172,10 +172,10 @@ export function TestimonialsCarousel() {
             </div>
           </div>
 
-          {/* Navigation arrows */}
+          {/* Navigation arrows - hidden on mobile, shown on desktop */}
           <button
             onClick={goToPrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-gradient-to-r from-accent-primary to-accent-secondary text-white rounded-full shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-accent-primary/30"
+            className="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-gradient-to-r from-accent-primary to-accent-secondary text-white rounded-full shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-accent-primary/30"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -183,7 +183,7 @@ export function TestimonialsCarousel() {
 
           <button
             onClick={goToNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-gradient-to-r from-accent-primary to-accent-secondary text-white rounded-full shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-accent-primary/30"
+            className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-gradient-to-r from-accent-primary to-accent-secondary text-white rounded-full shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-accent-primary/30"
             aria-label="Next testimonial"
           >
             <ChevronRight className="w-6 h-6" />

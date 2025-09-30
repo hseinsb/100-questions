@@ -66,20 +66,18 @@ export function ValuePillars() {
             return (
               <motion.div
                 key={index}
-                initial={{ y: 30, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true, amount: 0.25 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -10 }}
-                className={`bg-gradient-to-br from-white to-${pillar.bgColor} border-2 border-accent-primary/10 rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:border-accent-primary/30 transition-all duration-300 text-center group cursor-pointer`}
+                className={`bg-gradient-to-br from-white to-${pillar.bgColor} border-2 border-accent-primary/10 rounded-2xl p-8 shadow-lg md:hover:shadow-2xl md:hover:border-accent-primary/30 md:hover:scale-105 md:hover:-translate-y-2 transition-all duration-300 text-center group cursor-pointer`}
               >
                 <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 + 0.2, type: "spring" }}
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  className="w-20 h-20 bg-gradient-to-br from-accent-primary to-accent-secondary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl group-hover:shadow-2xl transition-all duration-300"
+                  transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
+                  className="w-20 h-20 bg-gradient-to-br from-accent-primary to-accent-secondary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl md:group-hover:shadow-2xl md:group-hover:scale-110 md:group-hover:rotate-3 transition-all duration-300"
                 >
                   <Icon className="w-10 h-10 text-white" />
                 </motion.div>

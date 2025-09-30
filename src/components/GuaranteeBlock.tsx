@@ -78,15 +78,9 @@ export function GuaranteeBlock() {
               <div className="text-center">
                 <div className="bg-gradient-to-br from-accent-primary-weak to-accent-secondary-weak/30 rounded-2xl p-10 mb-6 border-2 border-accent-primary/20 shadow-inner">
                   <div className="mb-6">
-                    <motion.span
-                      initial={{ scale: 0 }}
-                      whileInView={{ scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ type: "spring", duration: 0.6 }}
-                      className="text-6xl font-extrabold gradient-text"
-                    >
+                    <span className="text-6xl font-extrabold gradient-text">
                       $9
-                    </motion.span>
+                    </span>
                     <span className="text-gray-600 ml-2 text-lg">USD</span>
                   </div>
                   <p className="text-gray-700 text-base mb-8 font-medium">
@@ -111,12 +105,7 @@ export function GuaranteeBlock() {
 
         {/* Trust indicators */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]" style={{ animationDelay: '0.3s' }}>
-          <motion.div
-            initial={false}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.4 }}
-            className="bg-gradient-to-br from-white to-accent-secondary-weak/10 border-2 border-accent-primary/10 md:hover:border-accent-primary/30 rounded-2xl p-8 shadow-lg md:hover:shadow-2xl md:hover:scale-105 md:hover:-translate-y-1 transition-all duration-300 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]"
-          >
+          <div className="bg-gradient-to-br from-white to-accent-secondary-weak/10 border-2 border-accent-primary/10 md:hover:border-accent-primary/30 rounded-2xl p-8 shadow-lg md:hover:shadow-2xl md:hover:scale-105 md:hover:-translate-y-1 transition-all duration-300">
             <div className="w-16 h-16 bg-gradient-to-br from-accent-secondary to-accent-primary rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
               <Download className="w-8 h-8 text-white" />
             </div>
@@ -124,15 +113,9 @@ export function GuaranteeBlock() {
             <p className="text-gray-600 text-sm">
               Download immediately after purchase. No waiting, no shipping delays.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={false}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.4 }}
-            className="bg-gradient-to-br from-white to-accent-primary-weak/10 border-2 border-accent-primary/10 md:hover:border-accent-primary/30 rounded-2xl p-8 shadow-lg md:hover:shadow-2xl md:hover:scale-105 md:hover:-translate-y-1 transition-all duration-300 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]"
-            style={{ animationDelay: '0.1s' }}
-          >
+          <div className="bg-gradient-to-br from-white to-accent-primary-weak/10 border-2 border-accent-primary/10 md:hover:border-accent-primary/30 rounded-2xl p-8 shadow-lg md:hover:shadow-2xl md:hover:scale-105 md:hover:-translate-y-1 transition-all duration-300">
             <div className="w-16 h-16 bg-gradient-to-br from-accent-primary to-accent-secondary rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
               <Shield className="w-8 h-8 text-white" />
             </div>
@@ -140,15 +123,9 @@ export function GuaranteeBlock() {
             <p className="text-gray-600 text-sm">
               Safe and secure checkout with instant access to your digital guide.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={false}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.4 }}
-            className="bg-gradient-to-br from-white to-accent-secondary-weak/10 border-2 border-accent-primary/10 md:hover:border-accent-primary/30 rounded-2xl p-8 shadow-lg md:hover:shadow-2xl md:hover:scale-105 md:hover:-translate-y-1 transition-all duration-300 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]"
-            style={{ animationDelay: '0.2s' }}
-          >
+          <div className="bg-gradient-to-br from-white to-accent-secondary-weak/10 border-2 border-accent-primary/10 md:hover:border-accent-primary/30 rounded-2xl p-8 shadow-lg md:hover:shadow-2xl md:hover:scale-105 md:hover:-translate-y-1 transition-all duration-300">
             <div className="w-16 h-16 bg-gradient-to-br from-accent-secondary to-accent-primary rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
               <FileText className="w-8 h-8 text-white" />
             </div>
@@ -156,7 +133,7 @@ export function GuaranteeBlock() {
             <p className="text-gray-600 text-sm">
               Complete guide with questions, interpretations, and relationship insights.
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

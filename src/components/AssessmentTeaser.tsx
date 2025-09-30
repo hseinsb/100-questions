@@ -136,13 +136,7 @@ export function AssessmentTeaser() {
           <div className="absolute bottom-20 right-10 w-[450px] h-[450px] bg-gradient-to-tl from-orange-300/20 to-accent-secondary/20 rounded-full" />
         </div>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <motion.div
-          initial={{ y: 30 }}
-          whileInView={{ y: 0 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
+        <div className="text-center mb-12 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]">
           <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4 flex items-center justify-center gap-3 flex-wrap">
             <Sparkles className="w-8 h-8 text-accent-primary" />
             <span className="text-ink-900">Not ready to buy?</span>{' '}
@@ -152,7 +146,7 @@ export function AssessmentTeaser() {
           <p className="text-gray-600 text-lg md:text-xl">
             Get a quick glimpse of your compatibility awareness
           </p>
-        </motion.div>
+        </div>
 
         <div className="bg-gradient-to-br from-white to-accent-primary-weak/10 rounded-2xl p-8 shadow-2xl border-2 border-accent-primary/20 max-w-2xl mx-auto">
           <AnimatePresence mode="wait">
@@ -165,13 +159,7 @@ export function AssessmentTeaser() {
                 className="space-y-8"
               >
                 {questions.map((question, index) => (
-                  <motion.div
-                    key={question.id}
-                    initial={{ y: 20 }}
-                    animate={{ y: 0 }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="space-y-4"
-                  >
+                  <div key={question.id} className="space-y-4">
                     <h3 className="font-semibold text-gray-800 text-lg">
                       {index + 1}. {question.question}
                     </h3>
@@ -193,15 +181,10 @@ export function AssessmentTeaser() {
                         </label>
                       ))}
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
 
-                <motion.div
-                  initial={{ y: 10 }}
-                  animate={{ y: 0 }}
-                  transition={{ delay: 0.5 }}
-                  className="text-center pt-6"
-                >
+                <div className="text-center pt-6">
                   <button
                     type="submit"
                     disabled={Object.keys(answers).length < questions.length}
@@ -209,7 +192,7 @@ export function AssessmentTeaser() {
                   >
                     Get My Snapshot
                   </button>
-                </motion.div>
+                </div>
               </motion.form>
             ) : (
               <motion.div

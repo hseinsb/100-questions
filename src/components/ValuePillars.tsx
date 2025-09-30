@@ -41,13 +41,7 @@ export function ValuePillars() {
           <div className="absolute bottom-20 right-10 w-[450px] h-[450px] bg-gradient-to-tl from-orange-300/20 to-accent-secondary/20 rounded-full" />
         </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <motion.div
-          initial={{ y: 30 }}
-          whileInView={{ y: 0 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]">
           <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4 flex items-center justify-center gap-3 flex-wrap">
             <Sparkles className="w-8 h-8 text-accent-primary" />
             <span className="text-ink-900">What makes this</span>{' '}
@@ -57,7 +51,7 @@ export function ValuePillars() {
           <p className="text-ink-600 text-lg md:text-xl max-w-3xl mx-auto">
             Not just questions—a complete system for building relationship clarity and confidence.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {pillars.map((pillar, index) => {
@@ -94,42 +88,27 @@ export function ValuePillars() {
         </div>
 
         {/* Call to action */}
-        <motion.div
-          initial={{ y: 20 }}
-          whileInView={{ y: 0 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-12"
-        >
+        <div className="text-center mt-12 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]" style={{ animationDelay: '0.4s' }}>
           <p className="text-ink-600 mb-6">
             Ready to experience the difference structured conversations can make?
           </p>
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+          <button
             onClick={() => {
               document.getElementById('product-preview')?.scrollIntoView({ behavior: 'smooth' })
             }}
             className="inline-flex items-center text-accent-secondary font-semibold hover:text-accent-secondary-hover transition-colors"
           >
             See what's inside the guide
-            <motion.svg
+            <svg
               className="w-4 h-4 ml-2"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              animate={{ x: [0, 2, 0] }}
-              transition={{ 
-                duration: 3, 
-                repeat: Infinity, 
-                ease: "easeInOut",
-                repeatType: "reverse"
-              }}
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </motion.svg>
-          </motion.button>
-        </motion.div>
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
     </>

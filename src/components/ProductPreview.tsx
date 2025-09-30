@@ -51,13 +51,7 @@ export function ProductPreview() {
           <div className="absolute bottom-1/4 left-1/4 w-[600px] h-[600px] bg-gradient-to-tl from-amber-300/20 to-accent-secondary/20 rounded-full" />
         </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <motion.div
-          initial={{ y: 30 }}
-          whileInView={{ y: 0 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]">
           <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4 flex items-center justify-center gap-3 flex-wrap">
             <Sparkles className="w-8 h-8 text-accent-primary animate-pulse" />
             <span className="gradient-text">What's inside</span>{' '}
@@ -67,7 +61,7 @@ export function ProductPreview() {
           <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto">
             Not just 100 questions—each includes 3 expert interpretations so you understand what the answers really mean.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {categories.map((category, index) => (
@@ -154,13 +148,7 @@ export function ProductPreview() {
         </motion.div>
 
         {/* CTA */}
-        <motion.div
-          initial={{ y: 20 }}
-          whileInView={{ y: 0 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center"
-        >
+        <div className="text-center opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]" style={{ animationDelay: '0.4s' }}>
           <button
             onClick={handleCtaClick}
             className="btn-primary text-lg mb-4"
@@ -170,7 +158,7 @@ export function ProductPreview() {
           <p className="text-sm text-gray-500">
             Instant download • Secure checkout
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
     </>

@@ -59,7 +59,7 @@ export function FAQAccordion() {
           <div className="absolute bottom-1/4 right-10 w-[450px] h-[450px] bg-gradient-to-tl from-amber-300/20 to-accent-secondary/20 rounded-full" />
         </div>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-12 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]">
+        <div className="text-center mb-12 opacity-0 animate-fade-in">
           <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4 flex items-center justify-center gap-3 flex-wrap">
             <Sparkles className="w-8 h-8 text-accent-primary animate-pulse" />
             <span className="gradient-text">Frequently asked</span>{' '}
@@ -78,8 +78,9 @@ export function FAQAccordion() {
               initial={false}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4 }}
-              className="bg-gradient-to-br from-white to-accent-primary-weak/10 border-2 border-accent-primary/10 md:hover:border-accent-primary/30 rounded-2xl p-6 shadow-lg md:hover:shadow-2xl md:hover:scale-[1.01] md:hover:-translate-y-1 transition-all duration-300 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={`bg-gradient-to-br from-white to-accent-primary-weak/10 border-2 border-accent-primary/10 md:hover:border-accent-primary/30 rounded-2xl p-6 shadow-lg md:hover:shadow-2xl md:hover:scale-[1.01] md:hover:-translate-y-1 transition-all duration-300 opacity-0 ${
+                index === 0 ? 'animate-fade-in' : index === 1 ? 'animate-fade-in-delay-1' : index === 2 ? 'animate-fade-in-delay-2' : index === 3 ? 'animate-fade-in-delay-3' : 'animate-fade-in-delay-4'
+              }`}
             >
               <button
                 onClick={() => toggleItem(faq.id)}
@@ -122,7 +123,7 @@ export function FAQAccordion() {
         </div>
 
         {/* Contact support */}
-        <div className="text-center mt-12 p-10 bg-gradient-to-br from-accent-primary-weak to-accent-secondary-weak/30 rounded-2xl border-2 border-accent-primary/20 shadow-xl opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]" style={{ animationDelay: '0.4s' }}>
+        <div className="text-center mt-12 p-10 bg-gradient-to-br from-accent-primary-weak to-accent-secondary-weak/30 rounded-2xl border-2 border-accent-primary/20 shadow-xl opacity-0 animate-fade-in-delay-4">
           <h3 className="font-heading font-bold text-2xl md:text-3xl text-ink-900 mb-3">
             Still have questions?
           </h3>

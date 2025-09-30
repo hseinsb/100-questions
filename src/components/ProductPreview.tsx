@@ -51,7 +51,7 @@ export function ProductPreview() {
           <div className="absolute bottom-1/4 left-1/4 w-[600px] h-[600px] bg-gradient-to-tl from-amber-300/20 to-accent-secondary/20 rounded-full" />
         </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-16 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]">
+        <div className="text-center mb-16 opacity-0 animate-fade-in">
           <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4 flex items-center justify-center gap-3 flex-wrap">
             <Sparkles className="w-8 h-8 text-accent-primary animate-pulse" />
             <span className="gradient-text">What's inside</span>{' '}
@@ -70,8 +70,9 @@ export function ProductPreview() {
                 initial={false}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.4 }}
-                className="bg-gradient-to-br from-white to-accent-primary-weak/10 border-2 border-accent-primary/10 md:hover:border-accent-primary/30 rounded-2xl p-8 shadow-xl md:hover:shadow-2xl md:hover:scale-105 md:hover:-translate-y-2 transition-all duration-300 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className={`bg-gradient-to-br from-white to-accent-primary-weak/10 border-2 border-accent-primary/10 md:hover:border-accent-primary/30 rounded-2xl p-8 shadow-xl md:hover:shadow-2xl md:hover:scale-105 md:hover:-translate-y-2 transition-all duration-300 opacity-0 ${
+                  index === 0 ? 'animate-fade-in' : index === 1 ? 'animate-fade-in-delay-1' : 'animate-fade-in-delay-2'
+                }`}
               >
               <div className="text-center mb-6">
                 <div className="text-6xl mb-4 filter drop-shadow-lg">
@@ -148,7 +149,7 @@ export function ProductPreview() {
         </motion.div>
 
         {/* CTA */}
-        <div className="text-center opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]" style={{ animationDelay: '0.4s' }}>
+        <div className="text-center opacity-0 animate-fade-in-delay-4">
           <button
             onClick={handleCtaClick}
             className="btn-primary text-lg mb-4"

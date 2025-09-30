@@ -136,7 +136,7 @@ export function AssessmentTeaser() {
           <div className="absolute bottom-20 right-10 w-[450px] h-[450px] bg-gradient-to-tl from-orange-300/20 to-accent-secondary/20 rounded-full" />
         </div>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-12 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]">
+        <div className="text-center mb-12 opacity-0 animate-fade-in">
           <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4 flex items-center justify-center gap-3 flex-wrap">
             <Sparkles className="w-8 h-8 text-accent-primary" />
             <span className="text-ink-900">Not ready to buy?</span>{' '}

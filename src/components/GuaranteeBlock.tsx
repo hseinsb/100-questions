@@ -22,7 +22,7 @@ export function GuaranteeBlock() {
         </div>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Main guarantee card */}
-        <div className="bg-gradient-to-br from-white to-accent-primary-weak/20 rounded-3xl shadow-2xl border-2 border-accent-primary/20 overflow-hidden mb-12 md:hover:shadow-3xl transition-shadow duration-500 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]">
+        <div className="bg-gradient-to-br from-white to-accent-primary-weak/20 rounded-3xl shadow-2xl border-2 border-accent-primary/20 overflow-hidden mb-12 md:hover:shadow-3xl transition-shadow duration-500 opacity-0 animate-fade-in">
           <div className="bg-gradient-to-r from-accent-primary via-accent-secondary to-accent-primary p-10 text-white text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgMjAgMTAgTSAxMCAwIEwgMTAgMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30" />
             <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl relative z-10">
@@ -104,7 +104,7 @@ export function GuaranteeBlock() {
         </div>
 
         {/* Trust indicators */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]" style={{ animationDelay: '0.3s' }}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center opacity-0 animate-fade-in-delay-3">
           <div className="bg-gradient-to-br from-white to-accent-secondary-weak/10 border-2 border-accent-primary/10 md:hover:border-accent-primary/30 rounded-2xl p-8 shadow-lg md:hover:shadow-2xl md:hover:scale-105 md:hover:-translate-y-1 transition-all duration-300">
             <div className="w-16 h-16 bg-gradient-to-br from-accent-secondary to-accent-primary rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
               <Download className="w-8 h-8 text-white" />

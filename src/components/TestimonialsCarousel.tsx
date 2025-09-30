@@ -99,13 +99,7 @@ export function TestimonialsCarousel() {
           <div className="absolute bottom-10 left-10 w-96 h-96 bg-gradient-to-tl from-amber-400/20 to-accent-secondary/20 rounded-full" />
         </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <motion.div
-          initial={{ y: 30 }}
-          whileInView={{ y: 0 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
+        <div className="text-center mb-12 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]">
           <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4 flex items-center justify-center gap-3 flex-wrap">
             <Sparkles className="w-8 h-8 text-accent-primary" />
             <span className="gradient-text">Real couples.</span>{' '}
@@ -115,7 +109,7 @@ export function TestimonialsCarousel() {
           <p className="text-ink-600 text-body-lg max-w-2xl mx-auto">
             See how these questions transformed relationships
           </p>
-        </motion.div>
+        </div>
 
         <div 
           className="relative max-w-4xl mx-auto touch-pan-y"
@@ -142,16 +136,11 @@ export function TestimonialsCarousel() {
               className="transition-opacity duration-500 ease-in-out"
             >
               <div className="card text-center py-12 px-8 bg-gradient-to-br from-white to-accent-primary-weak/20 border-2 border-accent-primary/10 shadow-2xl">
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.5, type: "spring" }}
-                  className="flex justify-center mb-6"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-br from-accent-primary to-accent-secondary rounded-full flex items-center justify-center shadow-lg">
-                    <Heart className="w-8 h-8 text-white fill-current" />
+                  <div className="flex justify-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-accent-primary to-accent-secondary rounded-full flex items-center justify-center shadow-lg">
+                      <Heart className="w-8 h-8 text-white fill-current" />
+                    </div>
                   </div>
-                </motion.div>
 
                 <blockquote className="text-ink-900 text-lg md:text-xl mb-6 leading-relaxed font-medium">
                   "{testimonials[currentIndex].content}"

@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 export function BookMockup() {
 
@@ -14,11 +15,16 @@ export function BookMockup() {
         repeat: Infinity,
         ease: "easeInOut",
       }}
+      className="w-[500px] md:w-[600px] lg:w-[700px]"
     >
-      <img
+      <Image
         src="/cover-image.png"
         alt="100 Questions for Relationship Compatibility Book Cover"
-        className="w-[500px] md:w-[600px] lg:w-[700px] h-auto object-contain drop-shadow-2xl"
+        width={700}
+        height={900}
+        priority
+        quality={90}
+        className="w-full h-auto object-contain drop-shadow-2xl"
       />
     </motion.div>
   )

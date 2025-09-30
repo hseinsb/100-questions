@@ -101,10 +101,19 @@
 }
 
 /* Performance optimizations */
-* {
+img, picture, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Only apply 3D transforms where needed */
+.card,
+.btn-primary,
+.btn-secondary {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  transform-style: preserve-3d;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 /* Reduced motion preferences */

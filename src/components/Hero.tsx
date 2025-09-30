@@ -65,29 +65,13 @@ export function Hero() {
         <div className="absolute bottom-32 right-10 w-24 h-24 border-4 border-accent-secondary/20 rounded-2xl rotate-12 animate-float" />
         <div className="absolute top-1/3 left-10 w-20 h-20 bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20 rounded-xl rotate-45 animate-spin" style={{ animationDuration: '20s' }} />
         
-        {/* Sparkle effects */}
-        <motion.div
-          className="absolute top-1/4 left-1/2 text-accent-primary/40"
-          animate={{ 
-            scale: [1, 1.2, 1],
-            rotate: [0, 180, 360],
-            opacity: [0.3, 0.6, 0.3]
-          }}
-          transition={{ duration: 4, repeat: Infinity }}
-        >
+        {/* Sparkle effects - optimized */}
+        <div className="absolute top-1/4 left-1/2 text-accent-primary/30 animate-pulse">
           <Sparkles className="w-12 h-12" />
-        </motion.div>
-        <motion.div
-          className="absolute bottom-1/3 right-1/3 text-accent-secondary/40"
-          animate={{ 
-            scale: [1, 1.3, 1],
-            rotate: [360, 180, 0],
-            opacity: [0.2, 0.5, 0.2]
-          }}
-          transition={{ duration: 5, repeat: Infinity, delay: 1 }}
-        >
+        </div>
+        <div className="absolute bottom-1/3 right-1/3 text-accent-secondary/30 animate-pulse" style={{ animationDelay: '1s' }}>
           <Sparkles className="w-10 h-10" />
-        </motion.div>
+        </div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">

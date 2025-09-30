@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;700&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: theme('colors.ink.900');
+    background-color: theme('colors.surface.base');
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sora', system-ui, sans-serif;
+    font-weight: 600;
+    color: theme('colors.ink.900');
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-accent-primary to-accent-secondary text-white text-button px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-2xl hover:shadow-accent-primary/30 hover:-translate-y-1 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-accent-primary/50 focus:ring-offset-2;
+    will-change: transform;
+    background-size: 200% auto;
+  }
+  
+  .btn-primary:hover {
+    background-position: right center;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-accent-secondary text-accent-secondary text-button px-8 py-4 rounded-full transition-all duration-300 hover:bg-accent-secondary hover:text-white hover:-translate-y-1 hover:shadow-xl hover:shadow-accent-secondary/20 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-accent-secondary/50 focus:ring-offset-2;
+    will-change: transform;
+  }
+  
+  .card {
+    @apply bg-surface-card rounded-xl p-6 shadow-sm border border-ink-100/50 transition-all duration-300 hover:shadow-xl hover:border-accent-primary/20 hover:-translate-y-1;
+    will-change: transform;
+  }
+  
+  .animated-underline {
+    @apply relative;
+  }
+  
+  .animated-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 h-1 bg-gradient-to-r from-accent-primary to-accent-secondary opacity-0 rounded-full;
+    animation: underline-draw 600ms ease-out 1.2s forwards;
+  }
+  
+  .shimmer-effect {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(212, 168, 83, 0.1),
+      transparent
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2.5s infinite;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent-primary to-accent-secondary bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .noise-texture {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+  
+  .gradient-bg-animated {
+    background: linear-gradient(
+      -45deg,
+      #FDF8E8,
+      #F9F5ED,
+      #FFF9E6,
+      #FDF8E8
+    );
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+  }
+  
+  .glow-effect {
+    box-shadow: 0 0 30px rgba(212, 168, 83, 0.3);
+  }
+  
+  .glow-effect-strong {
+    box-shadow: 0 0 50px rgba(212, 168, 83, 0.5), 0 0 100px rgba(212, 168, 83, 0.2);
+  }
+}
+
+/* Performance optimizations */
+* {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-heart-beat {
+    animation: none;
+  }
+  
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Performance for animations */
+.animate-float,
+.animate-heart-beat {
+  will-change: transform;
+}
+
+

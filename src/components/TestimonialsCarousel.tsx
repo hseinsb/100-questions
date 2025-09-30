@@ -118,20 +118,28 @@ export function TestimonialsCarousel() {
         </motion.div>
 
         <div 
-          className="relative max-w-4xl mx-auto"
+          className="relative max-w-4xl mx-auto touch-pan-y"
           onMouseEnter={() => setIsPlaying(false)}
           onMouseLeave={() => setIsPlaying(true)}
+          onTouchStart={(e) => {
+            const touch = e.touches[0]
+            const startX = touch.clientX
+            const handleTouchEnd = (endEvent: TouchEvent) => {
+              const endTouch = endEvent.changedTouches[0]
+              const diffX = startX - endTouch.clientX
+              if (Math.abs(diffX) > 50) {
+                diffX > 0 ? goToNext() : goToPrev()
+              }
+              document.removeEventListener('touchend', handleTouchEnd)
+            }
+            document.addEventListener('touchend', handleTouchEnd)
+          }}
         >
           {/* Main carousel */}
           <div className="relative rounded-xl">
             <div
               key={currentIndex}
               className="transition-opacity duration-500 ease-in-out"
-              style={{ 
-                transform: 'translate3d(0, 0, 0)',
-                backfaceVisibility: 'hidden',
-                WebkitBackfaceVisibility: 'hidden'
-              }}
             >
               <div className="card text-center py-12 px-8 bg-gradient-to-br from-white to-accent-primary-weak/20 border-2 border-accent-primary/10 shadow-2xl">
                 <motion.div

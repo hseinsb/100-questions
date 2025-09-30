@@ -66,21 +66,17 @@ export function ValuePillars() {
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.25 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`bg-gradient-to-br from-white to-${pillar.bgColor} border-2 border-accent-primary/10 rounded-2xl p-8 shadow-lg md:hover:shadow-2xl md:hover:border-accent-primary/30 md:hover:scale-105 md:hover:-translate-y-2 transition-all duration-300 text-center group cursor-pointer`}
+                initial={false}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4 }}
+                className={`bg-gradient-to-br from-white to-${pillar.bgColor} border-2 border-accent-primary/10 rounded-2xl p-8 shadow-lg md:hover:shadow-2xl md:hover:border-accent-primary/30 md:hover:scale-105 md:hover:-translate-y-2 transition-all duration-300 text-center group cursor-pointer opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]`}
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
+                <div
                   className="w-20 h-20 bg-gradient-to-br from-accent-primary to-accent-secondary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl md:group-hover:shadow-2xl md:group-hover:scale-110 md:group-hover:rotate-3 transition-all duration-300"
                 >
                   <Icon className="w-10 h-10 text-white" />
-                </motion.div>
+                </div>
 
                 <h3 className="font-heading font-bold text-2xl text-ink-900 mb-4">
                   {pillar.title}

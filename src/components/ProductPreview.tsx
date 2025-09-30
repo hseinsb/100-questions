@@ -73,22 +73,16 @@ export function ProductPreview() {
           {categories.map((category, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.25 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-white to-accent-primary-weak/10 border-2 border-accent-primary/10 md:hover:border-accent-primary/30 rounded-2xl p-8 shadow-xl md:hover:shadow-2xl md:hover:scale-105 md:hover:-translate-y-2 transition-all duration-300"
+                initial={false}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4 }}
+                className="bg-gradient-to-br from-white to-accent-primary-weak/10 border-2 border-accent-primary/10 md:hover:border-accent-primary/30 rounded-2xl p-8 shadow-xl md:hover:shadow-2xl md:hover:scale-105 md:hover:-translate-y-2 transition-all duration-300 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
               <div className="text-center mb-6">
-                <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 + 0.2, type: "spring" }}
-                  className="text-6xl mb-4 filter drop-shadow-lg"
-                >
+                <div className="text-6xl mb-4 filter drop-shadow-lg">
                   {category.icon}
-                </motion.div>
+                </div>
                 <h3 className="font-heading font-bold text-2xl text-ink-900">
                   {category.title}
                 </h3>

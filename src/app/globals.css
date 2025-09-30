@@ -116,7 +116,7 @@ img, picture, video {
   -webkit-transform: translateZ(0);
 }
 
-/* Disable hover effects on touch devices to prevent lag */
+/* Disable hover effects and complex animations on touch devices to prevent lag */
 @media (hover: none) and (pointer: coarse) {
   .card:hover,
   .btn-primary:hover,
@@ -125,9 +125,24 @@ img, picture, video {
     box-shadow: inherit !important;
   }
   
+  /* Disable viewport-triggered animations on mobile - they cause glitches */
+  [class*="motion-"] {
+    animation: simpleFadeIn 0.3s ease-out !important;
+  }
+  
   /* Keep basic transitions smooth */
   * {
     transition-duration: 0.2s !important;
+  }
+}
+
+/* Simple fade-in for mobile */
+@keyframes simpleFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

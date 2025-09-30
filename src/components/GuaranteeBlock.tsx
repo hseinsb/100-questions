@@ -132,10 +132,10 @@ export function GuaranteeBlock() {
           className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
         >
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="bg-gradient-to-br from-white to-accent-secondary-weak/10 border-2 border-accent-primary/10 md:hover:border-accent-primary/30 rounded-2xl p-8 shadow-lg md:hover:shadow-2xl md:hover:scale-105 md:hover:-translate-y-1 transition-all duration-300"
+            initial={false}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4 }}
+            className="bg-gradient-to-br from-white to-accent-secondary-weak/10 border-2 border-accent-primary/10 md:hover:border-accent-primary/30 rounded-2xl p-8 shadow-lg md:hover:shadow-2xl md:hover:scale-105 md:hover:-translate-y-1 transition-all duration-300 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]"
           >
             <div className="w-16 h-16 bg-gradient-to-br from-accent-secondary to-accent-primary rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
               <Download className="w-8 h-8 text-white" />
@@ -147,10 +147,11 @@ export function GuaranteeBlock() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-gradient-to-br from-white to-accent-primary-weak/10 border-2 border-accent-primary/10 md:hover:border-accent-primary/30 rounded-2xl p-8 shadow-lg md:hover:shadow-2xl md:hover:scale-105 md:hover:-translate-y-1 transition-all duration-300"
+            initial={false}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4 }}
+            className="bg-gradient-to-br from-white to-accent-primary-weak/10 border-2 border-accent-primary/10 md:hover:border-accent-primary/30 rounded-2xl p-8 shadow-lg md:hover:shadow-2xl md:hover:scale-105 md:hover:-translate-y-1 transition-all duration-300 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]"
+            style={{ animationDelay: '0.1s' }}
           >
             <div className="w-16 h-16 bg-gradient-to-br from-accent-primary to-accent-secondary rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
               <Shield className="w-8 h-8 text-white" />
@@ -162,10 +163,11 @@ export function GuaranteeBlock() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-gradient-to-br from-white to-accent-secondary-weak/10 border-2 border-accent-primary/10 md:hover:border-accent-primary/30 rounded-2xl p-8 shadow-lg md:hover:shadow-2xl md:hover:scale-105 md:hover:-translate-y-1 transition-all duration-300"
+            initial={false}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4 }}
+            className="bg-gradient-to-br from-white to-accent-secondary-weak/10 border-2 border-accent-primary/10 md:hover:border-accent-primary/30 rounded-2xl p-8 shadow-lg md:hover:shadow-2xl md:hover:scale-105 md:hover:-translate-y-1 transition-all duration-300 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]"
+            style={{ animationDelay: '0.2s' }}
           >
             <div className="w-16 h-16 bg-gradient-to-br from-accent-secondary to-accent-primary rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
               <FileText className="w-8 h-8 text-white" />

@@ -122,27 +122,20 @@ export function FAQAccordion() {
         </div>
 
         {/* Contact support */}
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-12 p-10 bg-gradient-to-br from-accent-primary-weak to-accent-secondary-weak/30 rounded-2xl border-2 border-accent-primary/20 shadow-xl"
-        >
+        <div className="text-center mt-12 p-10 bg-gradient-to-br from-accent-primary-weak to-accent-secondary-weak/30 rounded-2xl border-2 border-accent-primary/20 shadow-xl opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]" style={{ animationDelay: '0.4s' }}>
           <h3 className="font-heading font-bold text-2xl md:text-3xl text-ink-900 mb-3">
             Still have questions?
           </h3>
           <p className="text-gray-700 mb-6 text-lg">
             We're here to help you make the right decision for your relationship.
           </p>
-          <motion.a
+          <a
             href="mailto:hussein.sbeiti.wb@gmail.com"
-            whileHover={{ scale: 1.05 }}
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-accent-primary to-accent-secondary text-white font-bold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-accent-primary to-accent-secondary text-white font-bold rounded-xl shadow-lg md:hover:shadow-2xl md:hover:scale-105 transition-all duration-300"
           >
             Email us: hussein.sbeiti.wb@gmail.com
-          </motion.a>
-        </motion.div>
+          </a>
+        </div>
       </div>
     </section>
     </>

@@ -22,24 +22,12 @@ export function GuaranteeBlock() {
         </div>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Main guarantee card */}
-                 <motion.div
-           initial={{ y: 30, opacity: 0 }}
-           whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.6 }}
-          className="bg-gradient-to-br from-white to-accent-primary-weak/20 rounded-3xl shadow-2xl border-2 border-accent-primary/20 overflow-hidden mb-12 hover:shadow-3xl transition-shadow duration-500"
-        >
+        <div className="bg-gradient-to-br from-white to-accent-primary-weak/20 rounded-3xl shadow-2xl border-2 border-accent-primary/20 overflow-hidden mb-12 md:hover:shadow-3xl transition-shadow duration-500 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]">
           <div className="bg-gradient-to-r from-accent-primary via-accent-secondary to-accent-primary p-10 text-white text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgMjAgMTAgTSAxMCAwIEwgMTAgMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30" />
-            <motion.div
-              initial={{ scale: 0, rotate: -180 }}
-              whileInView={{ scale: 1, rotate: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2, type: "spring" }}
-              className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl relative z-10"
-            >
+            <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl relative z-10">
               <FileText className="w-10 h-10 text-accent-primary" />
-            </motion.div>
+            </div>
             <h2 className="font-heading font-bold text-3xl md:text-4xl mb-3 relative z-10">
               Get Your Complete Guide Today
             </h2>
@@ -105,10 +93,8 @@ export function GuaranteeBlock() {
                     Less than the cost of one dinner out—for conversations that could change your life
                   </p>
                   
-                  <motion.button
+                  <button
                     onClick={handleCtaClick}
-                    whileHover={{ scale: 1.05, y: -2 }}
-                    whileTap={{ scale: 0.98 }}
                     className="btn-primary w-full text-xl py-5 shadow-2xl"
                   >
                     Get the Guide — $9

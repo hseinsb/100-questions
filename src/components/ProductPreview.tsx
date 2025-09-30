@@ -45,12 +45,10 @@ export function ProductPreview() {
     <>
       <div className="border-t-4 border-accent-primary/30"></div>
       <section id="product-preview" className="py-20 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 relative overflow-hidden">
-        {/* Vibrant Background decorative elements */}
+        {/* Lightweight Background */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-gradient-to-br from-accent-primary/30 to-orange-300/30 rounded-full blur-3xl animate-pulse-glow" />
-          <div className="absolute bottom-1/4 left-1/4 w-[600px] h-[600px] bg-gradient-to-tl from-amber-300/30 to-accent-secondary/30 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '2s' }} />
-          <div className="absolute top-10 left-10 w-28 h-28 border-4 border-orange-300/30 rounded-full animate-float" />
-          <div className="absolute bottom-10 right-10 w-24 h-24 bg-gradient-to-br from-yellow-300/20 to-amber-300/20 rounded-xl rotate-12 animate-bounce-subtle" />
+          <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-gradient-to-br from-accent-primary/20 to-orange-300/20 rounded-full" />
+          <div className="absolute bottom-1/4 left-1/4 w-[600px] h-[600px] bg-gradient-to-tl from-amber-300/20 to-accent-secondary/20 rounded-full" />
         </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div

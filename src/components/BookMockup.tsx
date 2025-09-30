@@ -23,8 +23,9 @@ export function BookMockup() {
         width={700}
         height={900}
         priority
-        quality={90}
-        className="w-full h-auto object-contain drop-shadow-2xl"
+        quality={85}
+        className="w-full h-auto object-contain"
+        style={{ filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.15))' }}
       />
     </motion.div>
   )

@@ -15,12 +15,10 @@ export function GuaranteeBlock() {
     <>
       <div className="border-t-4 border-accent-primary/30"></div>
       <section className="py-20 bg-gradient-to-br from-orange-50 via-yellow-50 to-amber-50 relative overflow-hidden">
-        {/* Vibrant Background decorative elements */}
+        {/* Lightweight Background */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-r from-accent-primary/20 to-orange-300/20 rounded-full blur-3xl animate-pulse-glow" />
-          <div className="absolute top-20 right-20 w-[400px] h-[400px] bg-gradient-to-br from-amber-300/30 to-accent-secondary/30 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
-          <div className="absolute bottom-32 left-32 w-32 h-32 border-4 border-orange-300/30 rounded-full animate-bounce-subtle" />
-          <div className="absolute top-1/3 left-20 w-24 h-24 bg-gradient-to-br from-yellow-300/20 to-amber-300/20 rounded-2xl rotate-45 animate-spin" style={{ animationDuration: '20s' }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-r from-accent-primary/15 to-orange-300/15 rounded-full" />
+          <div className="absolute top-20 right-20 w-[400px] h-[400px] bg-gradient-to-br from-amber-300/20 to-accent-secondary/20 rounded-full" />
         </div>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Main guarantee card */}

@@ -36,12 +36,10 @@ export function OldNewSection() {
     <>
       <div className="border-t-4 border-accent-primary/30"></div>
       <section ref={sectionRef} className="py-20 bg-gradient-to-br from-yellow-50 via-orange-50 to-amber-50 relative overflow-hidden">
-        {/* Vibrant Background decorative elements */}
+        {/* Lightweight Background */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-gradient-to-br from-red-200/30 to-orange-200/30 rounded-full blur-3xl animate-pulse-glow" />
-          <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-gradient-to-tl from-green-200/30 to-emerald-200/30 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
-          <div className="absolute top-20 right-20 w-32 h-32 border-4 border-orange-300/30 rounded-2xl rotate-12 animate-float" />
-          <div className="absolute bottom-32 left-20 w-28 h-28 bg-gradient-to-br from-amber-300/20 to-yellow-300/20 rounded-full animate-bounce-subtle" />
+          <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-gradient-to-br from-red-200/20 to-orange-200/20 rounded-full" />
+          <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-gradient-to-tl from-green-200/20 to-emerald-200/20 rounded-full" />
         </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div

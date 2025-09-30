@@ -130,12 +130,10 @@ export function AssessmentTeaser() {
     <>
       <div className="border-t-4 border-accent-primary/30"></div>
       <section id="assessment" className="py-20 bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50 relative overflow-hidden">
-        {/* Vibrant Background decorative elements */}
+        {/* Lightweight Background */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-[450px] h-[450px] bg-gradient-to-br from-accent-primary/30 to-amber-300/30 rounded-full blur-3xl animate-pulse-glow" />
-          <div className="absolute bottom-20 right-10 w-[450px] h-[450px] bg-gradient-to-tl from-orange-300/30 to-accent-secondary/30 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
-          <div className="absolute top-1/3 right-20 w-32 h-32 border-4 border-amber-300/30 rounded-2xl rotate-12 animate-float" />
-          <div className="absolute bottom-1/3 left-20 w-28 h-28 bg-gradient-to-br from-yellow-300/20 to-orange-300/20 rounded-full animate-bounce-subtle" />
+          <div className="absolute top-20 left-10 w-[450px] h-[450px] bg-gradient-to-br from-accent-primary/20 to-amber-300/20 rounded-full" />
+          <div className="absolute bottom-20 right-10 w-[450px] h-[450px] bg-gradient-to-tl from-orange-300/20 to-accent-secondary/20 rounded-full" />
         </div>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div

@@ -93,14 +93,10 @@ export function TestimonialsCarousel() {
     <>
       <div className="border-t-4 border-accent-primary/30"></div>
       <section className="py-20 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 relative overflow-hidden">
-        {/* Vibrant Background decorative elements */}
+        {/* Lightweight Background */}
         <div className="absolute inset-0">
-          <div className="absolute top-10 right-10 w-96 h-96 bg-gradient-to-br from-accent-primary/30 to-orange-300/30 rounded-full blur-3xl animate-pulse-glow" />
-          <div className="absolute bottom-10 left-10 w-96 h-96 bg-gradient-to-tl from-amber-400/30 to-accent-secondary/30 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-r from-orange-200/20 to-yellow-200/20 rounded-full blur-3xl" />
-          {/* Decorative shapes */}
-          <div className="absolute top-20 left-1/4 w-24 h-24 border-4 border-accent-primary/20 rounded-full animate-bounce-subtle" />
-          <div className="absolute bottom-20 right-1/4 w-20 h-20 bg-gradient-to-br from-accent-primary/20 to-orange-300/20 rounded-xl rotate-45 animate-spin" style={{ animationDuration: '20s' }} />
+          <div className="absolute top-10 right-10 w-96 h-96 bg-gradient-to-br from-accent-primary/20 to-orange-300/20 rounded-full" />
+          <div className="absolute bottom-10 left-10 w-96 h-96 bg-gradient-to-tl from-amber-400/20 to-accent-secondary/20 rounded-full" />
         </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div

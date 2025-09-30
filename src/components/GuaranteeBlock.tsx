@@ -112,7 +112,7 @@ export function GuaranteeBlock() {
                     className="btn-primary w-full text-xl py-5 shadow-2xl"
                   >
                     Get the Guide — $9
-                  </motion.button>
+                  </button>
                 </div>
 
                 <p className="text-xs text-gray-500">
@@ -121,16 +121,10 @@ export function GuaranteeBlock() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Trust indicators */}
-        <motion.div
-          initial={{ y: 20 }}
-          whileInView={{ y: 0 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]" style={{ animationDelay: '0.3s' }}>
           <motion.div
             initial={false}
             animate={{ opacity: 1 }}
@@ -177,7 +171,7 @@ export function GuaranteeBlock() {
               Complete guide with questions, interpretations, and relationship insights.
             </p>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </section>
     </>

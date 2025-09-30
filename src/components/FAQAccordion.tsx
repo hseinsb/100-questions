@@ -59,13 +59,7 @@ export function FAQAccordion() {
           <div className="absolute bottom-1/4 right-10 w-[450px] h-[450px] bg-gradient-to-tl from-amber-300/20 to-accent-secondary/20 rounded-full" />
         </div>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <motion.div
-          initial={{ y: 30 }}
-          whileInView={{ y: 0 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
+        <div className="text-center mb-12 opacity-0 animate-[simpleFadeIn_0.4s_ease-out_forwards]">
           <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4 flex items-center justify-center gap-3 flex-wrap">
             <Sparkles className="w-8 h-8 text-accent-primary animate-pulse" />
             <span className="gradient-text">Frequently asked</span>{' '}
@@ -75,7 +69,7 @@ export function FAQAccordion() {
           <p className="text-gray-600 text-lg md:text-xl">
             Everything you need to know about the guide
           </p>
-        </motion.div>
+        </div>
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (

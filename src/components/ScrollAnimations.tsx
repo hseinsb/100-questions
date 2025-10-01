@@ -14,16 +14,36 @@ export function ScrollAnimations() {
       },
       {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px',
+        rootMargin: '0px 0px -100px 0px',
       }
     )
 
-    // Observe all elements with fade-in animations
-    const elements = document.querySelectorAll('[class*="animate-fade-in"]')
-    elements.forEach((el) => observer.observe(el))
+    // Function to observe elements
+    const observeElements = () => {
+      const elements = document.querySelectorAll('[class*="animate-fade-in"]')
+      elements.forEach((el) => {
+        if (!el.classList.contains('is-visible')) {
+          observer.observe(el)
+        }
+      })
+    }
+
+    // Initial observation
+    observeElements()
+
+    // Re-observe when DOM changes (for dynamically loaded content)
+    const mutationObserver = new MutationObserver(() => {
+      observeElements()
+    })
+
+    mutationObserver.observe(document.body, {
+      childList: true,
+      subtree: true,
+    })
 
     return () => {
-      elements.forEach((el) => observer.unobserve(el))
+      observer.disconnect()
+      mutationObserver.disconnect()
     }
   }, [])
 

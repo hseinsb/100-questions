@@ -128,14 +128,16 @@ img, picture, video {
   }
 }
 
-/* Elements with fade animations stay hidden until visible */
-[class*="animate-fade-in"] {
-  opacity: 0;
+/* Elements with fade animations start hidden and paused */
+.opacity-0[class*="animate-fade"] {
+  opacity: 0 !important;
+  animation-play-state: paused;
 }
 
 /* Trigger animation when element enters viewport */
-.is-visible[class*="animate-fade-in"] {
-  animation-play-state: running;
+.is-visible.opacity-0[class*="animate-fade"] {
+  animation-play-state: running !important;
+  opacity: 1;
 }
 
 /* Disable hover effects on touch devices to prevent lag */

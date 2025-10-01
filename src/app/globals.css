@@ -116,7 +116,7 @@ img, picture, video {
   -webkit-transform: translateZ(0);
 }
 
-/* Fade-in animation - only triggers when element becomes visible */
+/* Fade-in animation keyframes */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -128,16 +128,36 @@ img, picture, video {
   }
 }
 
-/* Elements with fade animations start hidden and paused */
+/* Prevent animations from running automatically */
 .opacity-0[class*="animate-fade"] {
+  animation: none !important;
   opacity: 0 !important;
-  animation-play-state: paused;
+  transform: translateY(20px);
 }
 
-/* Trigger animation when element enters viewport */
-.is-visible.opacity-0[class*="animate-fade"] {
-  animation-play-state: running !important;
-  opacity: 1;
+/* Only run animations when element is visible */
+.is-visible.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards !important;
+}
+
+.is-visible.animate-fade-in-delay-1 {
+  animation: fadeIn 0.6s ease-out 0.1s forwards !important;
+}
+
+.is-visible.animate-fade-in-delay-2 {
+  animation: fadeIn 0.6s ease-out 0.2s forwards !important;
+}
+
+.is-visible.animate-fade-in-delay-3 {
+  animation: fadeIn 0.6s ease-out 0.3s forwards !important;
+}
+
+.is-visible.animate-fade-in-delay-4 {
+  animation: fadeIn 0.6s ease-out 0.4s forwards !important;
+}
+
+.is-visible.animate-fade-in-delay-5 {
+  animation: fadeIn 0.6s ease-out 0.5s forwards !important;
 }
 
 /* Disable hover effects on touch devices to prevent lag */

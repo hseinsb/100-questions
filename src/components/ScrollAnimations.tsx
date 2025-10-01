@@ -9,18 +9,21 @@ export function ScrollAnimations() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('is-visible')
+            // Optional: Unobserve after animating to improve performance
+            observer.unobserve(entry.target)
           }
         })
       },
       {
         threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px',
+        rootMargin: '0px 0px -100px 0px', // Trigger 100px before element enters viewport
       }
     )
 
-    // Function to observe elements
+    // Wait for DOM to be ready, then observe all elements
     const observeElements = () => {
       const elements = document.querySelectorAll('[class*="animate-fade-in"]')
+      console.log('Found elements to animate:', elements.length) // Debug log
       elements.forEach((el) => {
         if (!el.classList.contains('is-visible')) {
           observer.observe(el)
@@ -31,19 +34,12 @@ export function ScrollAnimations() {
     // Initial observation
     observeElements()
 
-    // Re-observe when DOM changes (for dynamically loaded content)
-    const mutationObserver = new MutationObserver(() => {
-      observeElements()
-    })
-
-    mutationObserver.observe(document.body, {
-      childList: true,
-      subtree: true,
-    })
+    // Also observe after a short delay to catch any late-loading elements
+    const timeoutId = setTimeout(observeElements, 100)
 
     return () => {
       observer.disconnect()
-      mutationObserver.disconnect()
+      clearTimeout(timeoutId)
     }
   }, [])
 

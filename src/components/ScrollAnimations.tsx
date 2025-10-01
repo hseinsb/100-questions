@@ -4,36 +4,40 @@ import { useEffect } from 'react'
 
 export function ScrollAnimations() {
   useEffect(() => {
+    // Create intersection observer
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            // Add is-visible class to trigger animation
             entry.target.classList.add('is-visible')
-            // Unobserve after animating to improve performance
+            // Stop observing this element
             observer.unobserve(entry.target)
           }
         })
       },
       {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px', // Trigger 50px before element enters viewport
+        threshold: 0.15,
+        rootMargin: '0px 0px -100px 0px',
       }
     )
 
-    // Observe all elements with fade-in animations
-    const elements = document.querySelectorAll('[class*="animate-fade-in"]')
-    console.log('Found elements to animate:', elements.length)
-    
-    elements.forEach((el) => {
-      // Check if element is already in viewport
+    // Find all elements to animate
+    const animateElements = document.querySelectorAll(
+      '.animate-fade-in, .animate-fade-in-delay-1, .animate-fade-in-delay-2, .animate-fade-in-delay-3, .animate-fade-in-delay-4, .animate-fade-in-delay-5'
+    )
+
+    console.log('🎬 Scroll animations initialized:', animateElements.length, 'elements found')
+
+    animateElements.forEach((el) => {
       const rect = el.getBoundingClientRect()
-      const isInViewport = rect.top < window.innerHeight && rect.bottom > 0
+      const windowHeight = window.innerHeight
       
-      if (isInViewport) {
-        // Immediately add is-visible to elements already in view
+      // If element is already visible in viewport, show it immediately
+      if (rect.top < windowHeight && rect.bottom > 0) {
         el.classList.add('is-visible')
       } else {
-        // Observe elements below the fold
+        // Otherwise, observe it for when it comes into view
         observer.observe(el)
       }
     })
